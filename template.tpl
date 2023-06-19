@@ -52,6 +52,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const log = require('logToConsole');
 const queryPermission = require('queryPermission');
 const injectScript = require('injectScript');
+const encodeUriComponent = require('encodeUriComponent');
 
 const loaderBaseUrl = 'https://gtm-template.zuko.io/loaders/completion_tracking.js';
 
@@ -69,7 +70,7 @@ if (!data.hasOwnProperty('slug')) {
   data.gtmOnFailure();
 }
 
-let loaderUrl = loaderBaseUrl + '?slug=' + data.slug;
+let loaderUrl = loaderBaseUrl + '?slug=' + encodeUriComponent(data.slug);
 
 // Load the loader script
 injectScript(
@@ -142,6 +143,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 11/11/2022, 09:45:19
+Created on 19/06/2023, 07:15:06
 
 
