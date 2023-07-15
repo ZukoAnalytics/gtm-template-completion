@@ -2,8 +2,10 @@ homepage: "https://zuko.io"
 documentation: "https://zuko.io/guides/install-zuko-tracking-tags-in-google-tag-manager"
 versions:
   # Latest version
+  - sha: a7136e96c412e355944a8710b98d2516b0642b43
+    changeNotes: Use `EncodeUriComponent()` to encode query-string parameter
+  # Older versions
   - sha: 50903fededd9008626e5174a242e65e9878549bb
     changeNotes: Add required files.
-  # Older versions
   - sha: 3d4cabead4be566647eece6c4687b7bef0a2e23a
     changeNotes: Initial release.
